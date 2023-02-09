@@ -1,17 +1,50 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 body{
     width: 100vw;
-    margin: 0px;
-    padding: 0px;
 }
 
 .container{
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+    max-height: max-content;
+    min-width: 400px;
+    max-width: max-content;
+}
+
+.clear{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+li{
+    padding: 5px;
+    text-align: start;
+    list-style: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+li:hover{
+    background: #aaa;
+}
+
+.checked{
+    text-decoration: line-through;
 }
