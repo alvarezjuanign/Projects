@@ -54,6 +54,7 @@ li:hover{
 
 .checked{
     text-decoration: line-through;
+    background: #aaaaaa;
 }
 
 #new-item{

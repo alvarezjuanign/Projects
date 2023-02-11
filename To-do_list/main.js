@@ -2,13 +2,20 @@ const button = document.querySelector(".btn")
 const clearAll = document.querySelector(".clear")
 const newItem = document.getElementById("new-item")
 const list = document.querySelector(".list")
-const item = document.querySelectorAll('li')
+let item = document.getElementsByTagName('LI')
 
 function appendItem (){
     if (newItem.value === '') return
-    const li = document.createElement('li')
+
+    let li = document.createElement('li')
     li.appendChild(document.createTextNode(newItem.value))
     list.appendChild(li)
+}
+
+function clearAllItems(){
+    while (list.firstChild){
+        list.removeChild(list.firstChild)
+    }
 }
 
 list.addEventListener('click', (e)=>{
@@ -18,19 +25,21 @@ list.addEventListener('click', (e)=>{
 })
 
 button.addEventListener('click', ()=>{
-    appendItem(newItem.value)
+    appendItem()
     newItem.value = ''
 })
 
 clearAll.addEventListener('click', ()=>{
-    while (list.firstChild){
-        list.removeChild(list.firstChild)
-    }
+    clearAllItems()
 })
 
 window.addEventListener('keyup', (e)=>{
     if (e.key === 'Enter'){
-    appendItem(newItem.value)
+    appendItem()
     newItem.value = ''
+    }
+
+    if(e.key === 'Escape'){
+        clearAllItems()
     }
 })
