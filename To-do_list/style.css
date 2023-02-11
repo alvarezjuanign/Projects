@@ -7,6 +7,12 @@
 
 body{
     width: 100vw;
+    background: #232323;
+}
+
+h1{
+    color: #faebd7;
+    margin: 50px;
 }
 
 .container{
@@ -20,17 +26,18 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 700px;
+    min-height: 500px;
     max-height: max-content;
     min-width: 400px;
     max-width: max-content;
+    color: #faebd7;
 }
 
-.clear{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+.list-container{
+    height: 316px;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y proximity;
 }
 
 li{
@@ -42,9 +49,76 @@ li{
 }
 
 li:hover{
-    background: #aaa;
+    background: #aaaaaa;
 }
 
 .checked{
     text-decoration: line-through;
+}
+
+#new-item{
+    padding: 5px;
+    background: #333;
+    height: 30px;
+    border-right: 2px solid #1c63fc;
+    border-bottom: 2px solid #1c63fc;
+    margin-bottom: 10px;
+    color: #faebd7;
+}
+
+#new-item:hover{
+    border-bottom: 3px solid #1c63fc;
+    border-right: 3px solid #1c63fc;
+}
+
+#new-item:focus{
+    outline: none;
+}
+
+/* BUTTONS */
+.btn{
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    transition: .1s;
+    margin-bottom: 10px;
+}
+
+.btn:active{
+    background: #1c63fc;
+    color: #faebd7;
+}
+
+.clear{
+    width: fit-content;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    transition: .1s;
+}
+
+.clear:active{
+    background: #1c63fc;
+    color: #faebd7;
+}
+
+/* MODIFY SCROLLBAR FIREFOX*/
+*{
+    scrollbar-width: thin;
+    scrollbar-color: #1c63fc #232323;
+}
+
+/* MODIFY SCROLLBAR CHROME EDGE SAFARI*/
+*::-webkit-scrollbar{
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track{
+    background: #232323;
+}
+
+*::-webkit-scrollbar-thumb{
+    background: #1c63fc;
+    border-radius: 20px;
+    border: 3px solid #232323;
 }
