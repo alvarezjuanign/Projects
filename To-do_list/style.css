@@ -7,11 +7,11 @@
 
 body{
     width: 100vw;
-    background: #232323;
+    background: linear-gradient(to top, #344D67,#6ECCAF);
 }
 
 h1{
-    color: #faebd7;
+    color: #F3ECB0;
     margin: 50px;
 }
 
@@ -26,11 +26,10 @@ h1{
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 500px;
+    min-height: 200px;
     max-height: max-content;
-    min-width: 400px;
+    min-width: 200px;
     max-width: max-content;
-    color: #faebd7;
 }
 
 .list-container{
@@ -49,27 +48,22 @@ li{
 }
 
 li:hover{
-    background: #aaaaaa;
+    background: #6ECCAF;
 }
 
 .checked{
     text-decoration: line-through;
-    background: #aaaaaa;
+    background: #F3ECB0;
 }
 
 #new-item{
     padding: 5px;
-    background: #333;
+    background: ;
     height: 30px;
-    border-right: 2px solid #1c63fc;
-    border-bottom: 2px solid #1c63fc;
+    border: none;
+    border-bottom: ;
     margin-bottom: 10px;
-    color: #faebd7;
-}
-
-#new-item:hover{
-    border-bottom: 3px solid #1c63fc;
-    border-right: 3px solid #1c63fc;
+    color: ;
 }
 
 #new-item:focus{
@@ -80,33 +74,39 @@ li:hover{
 .btn{
     height: 30px;
     width: 400px;
+    border: none;
     border-radius: 10px;
     transition: .1s;
     margin-bottom: 10px;
 }
 
-.btn:active{
-    background: #1c63fc;
-    color: #faebd7;
+.btn:hover{
+    background: #6ECCAF;
+    color: #F3ECB0;
 }
 
-.clear{
-    width: fit-content;
-    height: 30px;
-    padding: 5px;
-    border-radius: 10px;
+.delete{
+    height: 20px;
+    width: 20px;
     transition: .1s;
+    cursor: pointer;
+    float: right;
 }
 
-.clear:active{
-    background: #1c63fc;
-    color: #faebd7;
+.delete:hover{
+    background: ;
+    color: ;
+}
+
+.delete:active{
+    background: ;
+    color: ;
 }
 
 /* MODIFY SCROLLBAR FIREFOX*/
 *{
     scrollbar-width: thin;
-    scrollbar-color: #1c63fc #232323;
+    scrollbar-color: ;
 }
 
 /* MODIFY SCROLLBAR CHROME EDGE SAFARI*/
@@ -115,11 +115,11 @@ li:hover{
 }
 
 *::-webkit-scrollbar-track{
-    background: #232323;
+    background: ;
 }
 
 *::-webkit-scrollbar-thumb{
-    background: #1c63fc;
+    background: ;
     border-radius: 20px;
-    border: 3px solid #232323;
+    border: ;
 }
