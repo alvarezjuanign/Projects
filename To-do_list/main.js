@@ -40,4 +40,3 @@ list.addEventListener("click", (e) => {
         e.target.classList.toggle("checked")
     }
 })
-
