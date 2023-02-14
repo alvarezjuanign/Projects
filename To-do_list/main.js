@@ -8,7 +8,7 @@ function addUIItem(txt) {
     li.innerHTML = txt;
     list.insertBefore(li, list.childNodes[0])
     const delBtn = document.createElement("button")
-    delBtn.textContent = "x";
+    delBtn.textContent = "X";
     delBtn.classList.add("delete")
     li.appendChild(delBtn)
     
