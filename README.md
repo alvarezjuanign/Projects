@@ -1,1 +1,1 @@
-Projectos hechos en HTML; CSS y JS
+Projects made in HTML, CSS and JS
